@@ -1,0 +1,80 @@
+<html>
+<head>
+
+  <title>Insult Generator</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div id="share-button" onclick="toggleIcons()">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+      <path d="M25.1,9.5l-15.2,8.4l15.2,7.6"/>
+        <circle cx="25.1" cy="9.9" r="4.4"/>
+        <circle cx="25.1" cy="25.1" r="4.4"/>
+        <circle cx="9.9" cy="17.9" r="4.4"/>
+      </path>
+    </svg>
+    Share
+  </div>
+
+  <div id="social-media-icon-container" class="container-closed">
+
+    <!---Twitter button--->
+    <div class="social-media-icon">
+      <a href="http://twitter.com/share?url=http://danielgurney.net/music/live-orchestra/index.html&text=Check out this webpage by @DrDanGurney" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
+          <path d="M11.378,30.91C23.832,30.91 30.642,20.592 30.642,11.646C30.642,11.353 30.636,11.061 30.623,10.771C31.945,9.815 33.094,8.623 34,7.265C32.787,7.804 31.481,8.167 30.112,8.331C31.51,7.493 32.583,6.167 33.089,4.586C31.781,5.361 30.332,5.925 28.79,6.229C27.554,4.913 25.795,4.09 23.848,4.09C20.109,4.09 17.077,7.122 17.077,10.86C17.077,11.391 17.136,11.908 17.252,12.404C11.625,12.121 6.635,9.426 3.296,5.33C2.715,6.33 2.38,7.493 2.38,8.733C2.38,11.082 3.575,13.156 5.393,14.369C4.282,14.334 3.238,14.029 2.326,13.522C2.325,13.55 2.325,13.578 2.325,13.608C2.325,16.887 4.659,19.625 7.757,20.245C7.188,20.4 6.59,20.484 5.972,20.484C5.536,20.484 5.112,20.441 4.699,20.361C5.561,23.052 8.061,25.009 11.024,25.064C8.707,26.88 5.788,27.962 2.615,27.962C2.069,27.962 1.53,27.931 1,27.868C3.996,29.789 7.555,30.91 11.379,30.91"/>
+        </svg>       
+      </a>
+    </div>
+
+    <!---Facebook button--->
+    <div class="social-media-icon">
+      <a href="http://www.facebook.com/sharer/sharer.php?u=http://danielgurney.net/psychology/index.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
+          <path d="M20.039,33.898l0,-14.96l5.021,0l0.752,-5.83l-5.773,0l0,-3.722c0,-1.688 0.469,-2.838 2.889,-2.838l3.087,-0.001l0,-5.215c-0.534,-0.071 -2.366,-0.23 -4.498,-0.23c-4.451,0 -7.498,2.717 -7.498,7.707l0,4.299l-5.034,0l0,5.83l5.034,0l0,14.96l6.02,0Z"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!---Google+ button--->
+    <div class="social-media-icon">
+      <a href="https://plus.google.com/share?url=http://danielgurney.net/music" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
+          <path d="M10.208,16.042L10.208,19.542L15.998,19.542C15.765,21.042 14.248,23.946 10.208,23.946C6.723,23.946 3.879,21.06 3.879,17.5C3.879,13.942 6.723,11.054 10.208,11.054C12.192,11.054 13.519,11.9 14.277,12.629L17.048,9.96C15.269,8.298 12.965,7.292 10.208,7.292C4.565,7.292 0,11.856 0,17.5C0,23.144 4.565,27.708 10.208,27.708C16.1,27.708 20.01,23.567 20.01,17.733C20.01,17.062 19.935,16.552 19.848,16.042L10.208,16.042L10.208,16.042ZM10.208,16.042L35,18.958L30.625,18.958L30.625,23.333L27.708,23.333L27.708,18.958L23.333,18.958L23.333,16.042L27.708,16.042L27.708,11.667L30.625,11.667L30.625,16.042L35,16.042L35,18.958L10.208,16.042Z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!---StumbleUpon button--->
+    <div class="social-media-icon">
+      <a href="http://www.stumbleupon.com/submit?url=http://danielgurney.net/psychology/index.html&title=Live Orchestra" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
+          <path d="M17.5,6.326C13.92,6.326 11.018,9.229 11.018,12.809L11.018,22.021C11.018,22.869 10.33,23.556 9.482,23.556C8.635,23.556 7.947,22.869 7.947,22.021L7.947,17.926L3,17.926L3,22.191C3,25.771 5.902,28.674 9.482,28.674C13.063,28.674 15.965,25.771 15.965,22.191L15.965,12.809C15.965,11.961 16.652,11.273 17.5,11.273C18.348,11.273 19.036,11.961 19.036,12.809L19.036,14.685L21.083,15.623L23.983,14.685L23.983,12.809C23.983,9.229 21.081,6.326 17.5,6.326ZM19.036,18.012L19.036,22.191C19.036,25.771 21.938,28.674 25.518,28.674C29.098,28.674 32.001,25.771 32.001,22.191L32.001,18.097L27.053,18.097L27.053,22.191C27.053,23.039 26.366,23.727 25.518,23.727C24.67,23.727 23.983,23.039 23.983,22.191L23.983,18.012L21.083,18.95L19.036,18.012Z"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</header>
+
+<h1>Insult Generator</h1>
+
+<div id="text">...</div>
+<div class="button" onclick=getInsult()>Generate Insult</div>
+
+<div class="option-container">
+    Smart: <input id="smart-input" type="range" min="0" max="2"/>
+    Dirty: <input id="dirty-input" type="range" min="0" max="2"/>
+<div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
