@@ -18,14 +18,14 @@ var getInsult = (function(){
         return arr[Math.floor(Math.random() * arr.length)];
     }
     function intInRange(val, min, max){
-        return Math.min(Math.max(Math.round(val),min), max);
+        return Math.min(Math.max(Math.round(val),min), max - 1);
     }
 
     // return a function that generates insults from the words above:
     return function (smart, dirty) {
 
-        smart = intInRange(smart, 0, 2);
-        dirty = intInRange(dirty, 0, 2);
+        smart = intInRange(smart, 0, wordBankA.length);
+        dirty = intInRange(dirty, 0, wordBankB.length);
 
         var first  = pickRandom( wordBankA[smart] );
         var second = pickRandom( wordBankB[dirty] );
