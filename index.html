@@ -11,7 +11,7 @@
 
 <header>
 
-  <div id="share-button" onclick="toggleIcons()">
+  <div id="share-button">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
       <path d="M25.1,9.5l-15.2,8.4l15.2,7.6"/>
         <circle cx="25.1" cy="9.9" r="4.4"/>
@@ -29,7 +29,7 @@
       <a href="http://twitter.com/share?url=http://danielgurney.net/music/live-orchestra/index.html&text=Check out this webpage by @DrDanGurney" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
           <path d="M11.378,30.91C23.832,30.91 30.642,20.592 30.642,11.646C30.642,11.353 30.636,11.061 30.623,10.771C31.945,9.815 33.094,8.623 34,7.265C32.787,7.804 31.481,8.167 30.112,8.331C31.51,7.493 32.583,6.167 33.089,4.586C31.781,5.361 30.332,5.925 28.79,6.229C27.554,4.913 25.795,4.09 23.848,4.09C20.109,4.09 17.077,7.122 17.077,10.86C17.077,11.391 17.136,11.908 17.252,12.404C11.625,12.121 6.635,9.426 3.296,5.33C2.715,6.33 2.38,7.493 2.38,8.733C2.38,11.082 3.575,13.156 5.393,14.369C4.282,14.334 3.238,14.029 2.326,13.522C2.325,13.55 2.325,13.578 2.325,13.608C2.325,16.887 4.659,19.625 7.757,20.245C7.188,20.4 6.59,20.484 5.972,20.484C5.536,20.484 5.112,20.441 4.699,20.361C5.561,23.052 8.061,25.009 11.024,25.064C8.707,26.88 5.788,27.962 2.615,27.962C2.069,27.962 1.53,27.931 1,27.868C3.996,29.789 7.555,30.91 11.379,30.91"/>
-        </svg>       
+        </svg>
       </a>
     </div>
 
@@ -41,7 +41,7 @@
         </svg>
       </a>
     </div>
-    
+
     <!---Google+ button--->
     <div class="social-media-icon">
       <a href="https://plus.google.com/share?url=http://danielgurney.net/music" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
@@ -67,7 +67,7 @@
 <h1>Insult Generator</h1>
 
 <div id="text">...</div>
-<div class="button" onclick=getInsult()>Generate Insult</div>
+<div class="button" id="insult-button">Generate Insult</div>
 
 <div class="option-container">
     Smart: <input id="smart-input" type="range" min="0" max="2"/>

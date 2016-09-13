@@ -1,8 +1,7 @@
 //Insult Generator Javascript
 
-function getInsult () {
+var getInsult = (function(){
 
-    //Get the words:
     var wordBankA = [
         ["Skanky", "Dappy", "Raging", "Dirty", "Filthy", "Greasy", "Grimy", "Sloppy", "Shabby", "Lazy"],
         ["Scatty", "Blathering", "Gobby", "Feeble", "Moronic", "Dreggy", "Cruddy", "Dingy", "Grubby", "Smutty"],
@@ -15,33 +14,53 @@ function getInsult () {
     ];
     var wordBankC = ["tard", "lark", "wit", "mite", "lick", "biscuit", "fig", "marshal", "wig", "squidge", "monkey", "gibbon", "whippet", "rabbit", "bucket"];
 
-    //Get the smartness and dirtiness values:
-    var smartVal = document.getElementById('smart-input').value;
-    var dirtyVal = document.getElementById('dirty-input').value;
+    function pickRandom(arr){
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+    function intInRange(val, min, max){
+        return Math.min(Math.max(Math.round(val),min), max);
+    }
 
-    //Generate word arrays based on these:
-    var insultArrays = [wordBankA[smartVal], wordBankB[dirtyVal], wordBankC];
+    // return a function that generates insults from the words above:
+    return function (smart, dirty) {
 
-    //Generate random words from arrays:
-    var finalPhrase = [];
-    for (i = 0; i < insultArrays.length; i++) {
-        var currentArray = insultArrays[i];
-        var word = currentArray[Math.floor(Math.random() * currentArray.length)];
-        finalPhrase.push(word);
+        smart = intInRange(smart, 0, 2);
+        dirty = intInRange(dirty, 0, 2);
+
+        var first  = pickRandom( wordBankA[smart] );
+        var second = pickRandom( wordBankB[dirty] );
+        var third  = pickRandom( wordBankC );
+
+        return first + " " + second + third;
+
     };
-    
-    //Post them to the text box:
-    document.getElementById('text').textContent = finalPhrase[0] + " " + finalPhrase[1] + finalPhrase[2];
 
-};
+}());
 
+// wait for the DOM to load before attaching any events:
+document.addEventListener("DOMContentLoaded", function(){
 
-function toggleIcons() {
-    var iconContainer = document.getElementById('social-media-icon-container');
+    //icon transition class adding:
+    document.getElementById("share-button").addEventListener("click", function() {
+        var iconContainer = document.getElementById('social-media-icon-container');
 
-    if (iconContainer.className == "container-closed") {
-        iconContainer.className = "container-open";
-    } else {
-        iconContainer.className = "container-closed"
-    };
-};
+        if (iconContainer.className == "container-closed") {
+            iconContainer.className = "container-open";
+        } else {
+            iconContainer.className = "container-closed"
+        };
+    });
+
+    // attach handler to get an insult and work with the DOM:
+    document.getElementById("insult-button").addEventListener("click", function(){
+
+        //Get the smartness and dirtiness values:
+        var smartVal = document.getElementById('smart-input').value;
+        var dirtyVal = document.getElementById('dirty-input').value;
+
+        //Post insult to the text box:
+        document.getElementById('text').textContent = getInsult(smartVal, dirtyVal);
+
+    });
+
+});
