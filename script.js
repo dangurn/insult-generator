@@ -4,13 +4,13 @@ function getInsult () {
 
     //Get the words:
     var wordBankA = [
-        ["Skanky", "Dappy", "Raging", "Dirty", "Filthy", "Greasy", "Grimy", "Sloppy", "Shabby", "Lazy"],
-        ["Scatty", "Blathering", "Gobby", "Feeble", "Moronic", "Dreggy", "Dingy", "Grubby", "Smutty", "Inbred", "Knuckle-dragging", "Perverted", "Callous"],
-        ["Lobotomised", "Imbecilic", "Incontinent", "Infantile", "Slovenly", "Squalid", "Unsightly", "Delipidated", "Apathetic", "Platitudinous", "Languorous", "Lackadaisical"]
+        ["Skanky", "Dappy", "Raging", "Dirty", "Filthy", "Greasy", "Grimy", "Sloppy", "Shabby", "Lazy", "Musty", "Dopey", "Freaky"],
+        ["Scatty", "Blathering", "Gobby", "Feeble", "Moronic", "Dreggy", "Dingy", "Grubby", "Smutty", "Inbred", "Knuckle-dragging", "Perverted", "Callous", "Uptight", "Rancid", "Putrid", "Thick-headed"],
+        ["Lobotomised", "Imbecilic", "Incontinent", "Infantile", "Slovenly", "Squalid", "Unsightly", "Delipidated", "Apathetic", "Platitudinous", "Languorous", "Lackadaisical", "Incestuous"]
     ];
     var wordBankB = [
         ["scum", "twit", "scud", "smudge", "scuz", "sludge", "dust", "lard", "swamp"],
-        ["jizz", "tit", "dick", "spunk", "turd"],
+        ["jizz", "tit", "dick", "spunk", "turd", "knob"],
         ["fuck", "shit", "twat", "wank", "piss"]
     ];
     var wordBankC = ["tard", "lark", "wit", "mite", "lick", "biscuit", "fig", "marshal", "wig", "squidge", "monkey", "gibbon", "whippet", "rabbit", "bucket"];
