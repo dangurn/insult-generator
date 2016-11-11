@@ -104,11 +104,14 @@ h1 {
 }
 
 #text {
-    height: 50px;
     font-size: 24px;
     display: flex;
     align-items: center;
     margin: 20px;
+    background: white;
+    color: forestgreen;
+    padding: 20px 40px;
+    border-radius: 40px;
 }
 
 .button {
