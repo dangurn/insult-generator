@@ -4,6 +4,7 @@
   <title>Insult Generator</title>
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -11,20 +12,9 @@
 
 <header>
 
-  <div id="share-button" onclick="toggleIcons()">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-      <path d="M25.1,9.5l-15.2,8.4l15.2,7.6"/>
-        <circle cx="25.1" cy="9.9" r="4.4"/>
-        <circle cx="25.1" cy="25.1" r="4.4"/>
-        <circle cx="9.9" cy="17.9" r="4.4"/>
-      </path>
-    </svg>
-    Share
-  </div>
-
   <div id="social-media-icon-container" class="container-closed">
 
-    <!---Twitter button--->
+    <!--Twitter button-->
     <div class="social-media-icon">
       <a href="http://twitter.com/share?url=https://dangurn.github.io/insult-generator&text=Check out this Insult Generator by @DrDanGurney" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
@@ -33,7 +23,7 @@
       </a>
     </div>
 
-    <!---Facebook button--->
+    <!--Facebook button-->
     <div class="social-media-icon">
       <a href="http://www.facebook.com/sharer/sharer.php?u=https://dangurn.github.io/insult-generator" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
@@ -42,7 +32,7 @@
       </a>
     </div>
     
-    <!---Google+ button--->
+    <!--Google+ button-->
     <div class="social-media-icon">
       <a href="https://plus.google.com/share?url=https://dangurn.github.io/insult-generator" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
@@ -51,7 +41,7 @@
       </a>
     </div>
 
-    <!---StumbleUpon button--->
+    <!--StumbleUpon button-->
     <div class="social-media-icon">
       <a href="http://www.stumbleupon.com/submit?url=https://dangurn.github.io/insult-generator&title=Insult Generator" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve">
@@ -65,14 +55,44 @@
 </header>
 
 <h1>Insult Generator</h1>
+<div class="option-container">
+    <div class="option"><span>Smart:</span><input id="smart-input" type="range" min="0" max="2"/></div>
+    <div class="option"><span>Rude:</span><input id="rude-input" type="range" min="0" max="2"/></div>
+</div>
 
-<div id="text">...</div>
-<div class="button" onclick=getInsult()>Generate Insult</div>
+<div id="text" onclick=getInsult()>...</div>
+<h2>Click the speech bubble to generate a new insult</h2>
 
 <div class="option-container">
-    Smart: <input id="smart-input" type="range" min="0" max="2"/>
-    Dirty: <input id="dirty-input" type="range" min="0" max="2"/>
-<div>
+
+  <div class="button" onclick=copyToClipboard()>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 26">
+        <polygon points="3.21 2.78 14.75 2.78 14.75 0 0 0 0 20.99 3.21 20.99 3.21 2.78"/>
+        <rect x="5.16" y="4.56" width="14.75" height="20.99"/>
+      </svg>
+    Copy
+  </div>
+
+  <div class="button" onclick=toggleIcons()>
+    <svg id="share-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+      <path d="M25.1,9.5l-15.2,8.4l15.2,7.6"/>
+        <circle cx="25.1" cy="9.9" r="4.4"/>
+        <circle cx="25.1" cy="25.1" r="4.4"/>
+        <circle cx="9.9" cy="17.9" r="4.4"/>
+      </path>
+    </svg>
+    Share
+  </div>
+
+</div>
+
+<footer>
+  <a href="http://dan.media">
+    Who made this?
+  </a>
+</footer>
+
+
 
 <script src="script.js"></script>
 

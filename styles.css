@@ -1,7 +1,7 @@
 /* Main page styles */
 
 body {
-    background: olivedrab;
+    background: #CA3B3E;
     font-family: 'Droid Sans';
     color: white;
     display: flex;
@@ -27,24 +27,8 @@ header {
 }
 
 #share-button {
-    display: flex;
-    align-items: center;
-    height: 35px;
-    font-size: 14px;
-    border: 1px solid white;
-    background: olivedrab;
-    fill: olivedrab;
-    color: white;
-    padding: 0px 10px;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: 0.2s all;
-}
-
-#share-button:hover {
-    background: darkolivegreen;
-    fill: darkolivegreen
+    fill: firebrick;
+    stroke: white;
 }
 
 #share-button svg {
@@ -73,8 +57,7 @@ header {
     height: 35px;
     width: 35px;
     color: white;
-    border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 4px;
     align-items: center;
     justify-content: center;
@@ -87,7 +70,7 @@ header {
 }
 
 .social-media-icon:hover {
-    background: darkolivegreen;
+    background: darkred;
     transition: 0.4s all;
     fill: white;
 }
@@ -99,8 +82,11 @@ header {
 
 /* Page elements */
 
-h1 {
-    border-bottom: 1px solid white;
+h2 {
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0px;
+    color: rgba(255,255,255,0.5)
 }
 
 #text {
@@ -109,9 +95,20 @@ h1 {
     align-items: center;
     margin: 20px;
     background: white;
-    color: forestgreen;
+    color: indianred;
+    text-align:center;
     padding: 20px 40px;
     border-radius: 40px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: 0.1s all;
+}
+
+#text:hover {
+    background: mistyrose;
 }
 
 .button {
@@ -119,27 +116,42 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 1px solid white;
+    background: firebrick;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.1s background;
     -webkit-user-select: none; 
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;  
+    user-select: none;
+    margin: 0px 5px;
 }
 
 .button:hover {
-    background: darkolivegreen;
+    background: darkred;
+}
+
+.button svg {
+    height: 20px;
+    width: auto;
+    fill: white;
+    margin-right: 5px;
 }
 
 .option-container {
-    margin-top: 30px;
+    margin: 15px;
     align-items: center;
     display: flex;
 }
 
 /* Sliders */
+
+.option {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
 
 input[type=range] {
     -webkit-appearance: none;
@@ -168,30 +180,30 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     border-radius: 15px;
-    background: olivedrab;
+    background: #CA3B3E;
     border: 2px solid white;
     cursor: pointer;
-    margin-top: -8px;
+    margin-top: -12px;
     }
 
 input[type=range]::-moz-range-thumb {
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     border-radius: 15px;
-    background: olivedrab;
+    background: #CA3B3E;
     border: 2px solid white;
     cursor: pointer;
 }
 
 
 input[type=range]::-ms-thumb {
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     border-radius: 15px;
-    background: olivedrab;
+    background: #CA3B3E;
     border: 2px solid white;
     cursor: pointer;
 }
@@ -234,4 +246,29 @@ input[type=range]::-ms-fill-upper {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(255,255,255,0.3);
+}
 
+footer {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px;
+}
+
+footer a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    transition: 0.1s all;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgba(255,255,255,0.8)
+}
+
+
+
+@media (max-width: 350px) {
+    .option {flex-flow: column}
+    .option span {padding: 5px;}
+}
