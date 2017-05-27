@@ -1,5 +1,7 @@
 //Insult Generator Javascript
 
+//Generate insult:
+
 function getInsult () {
 
     //Get the words:
@@ -10,10 +12,10 @@ function getInsult () {
     ];
     var wordBankB = [
         ["scum", "twit", "scud", "smudge", "scuz", "sludge", "dust", "lard", "swamp", "fish", "waste", "grime", "muck", "smut", "slush", "glop", "sleaze"],
-        ["jizz", "tit", "dick", "spunk", "turd", "arse", "knob", "cock", "fanny"],
+        ["jizz", "tit", "dick", "spunk", "turd", "arse", "knob", "cock"],
         ["fuck", "shit", "twat", "wank", "piss", "shite", "prick"]
     ];
-    var wordBankC = ["tard", "lark", "wit", "mite", "lick", "hawk", "biscuit", "fig", "marshal", "wig", "squidge", "monkey", "gibbon", "whippet", "rabbit", "bucket", "thistle", "wipe", "splurt", "stain"];
+    var wordBankC = ["tard", "lark", "wit", "mite", "hawk", "biscuit", "fig", "marshal", "wig", "squidge", "monkey", "gibbon", "whippet", "rabbit", "bucket", "thistle"];
 
     //Get the smartness and rudeness values:
     var smartVal = document.getElementById('smart-input').value;
@@ -36,6 +38,8 @@ function getInsult () {
 };
 
 
+//Control social media buttons:
+
 function toggleIcons() {
     var iconContainer = document.getElementById('social-media-icon-container');
 
@@ -45,8 +49,6 @@ function toggleIcons() {
         iconContainer.className = "container-closed"
     };
 };
-
-
 
 
 //Copy to clipboard function:
