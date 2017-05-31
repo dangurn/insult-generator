@@ -94,8 +94,20 @@ function copyTextToClipboard(text) {
   document.body.removeChild(textArea);
 }
 
+//Show 'Copied!' text
+function showCopiedText() {
+    var CopiedText = document.getElementById('copied-text')
+
+    CopiedText.style.opacity = 1;
+    
+    setTimeout(function() { 
+        CopiedText.style.opacity = 0; 
+    }, 3000);
+}
+
 //And the actual copy bit:
 function copyToClipboard() {
     var text = document.getElementById("text");
     copyTextToClipboard(text.textContent);
+    showCopiedText();
 }

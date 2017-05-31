@@ -149,6 +149,18 @@ h2 {
 }
 
 
+/*Copied text*/
+#copied-text {
+    color: rgba(255,255,255,0.8);
+    transition: 0.5s all;
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
 /* Sliders */
 
 input[type=range] {
